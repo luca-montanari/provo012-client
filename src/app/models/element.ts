@@ -1,5 +1,5 @@
-export interface Document {
-    id: number;
+export interface Element {
+    id: string;
     code: string;
     description: string;
     longDescription: string;

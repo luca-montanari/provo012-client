@@ -1,0 +1,29 @@
+<div [formGroup]="form" style="margin: 10px;">
+    <p>
+        <mat-form-field>
+            <mat-label>Codice</mat-label>
+            <input type="text" matInput formControlName="code" autocomplete="off">
+        </mat-form-field>    
+    </p>
+    <p>
+        <mat-form-field>
+            <mat-label>Descrizione</mat-label>
+            <input type="text" matInput formControlName="description" autocomplete="off">
+        </mat-form-field>    
+    </p>
+    <p>
+        <mat-form-field>
+            <mat-label>Note</mat-label>
+            <textarea matInput formControlName="longDescription" autocomplete="off"></textarea>
+        </mat-form-field>    
+    </p>
+    <button mat-raised-button color="primary" [disabled]="!form.valid" (click)="createElement()">
+        Crea
+    </button>
+</div>
+<div>
+    {{ form.value | json }}
+</div>
+<div>
+    {{ form.valid | json }}
+</div>
